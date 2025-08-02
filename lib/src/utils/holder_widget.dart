@@ -19,10 +19,7 @@ class HolderWidget extends StatelessWidget {
       child: Opacity(
         opacity: 1.0,
         child: ConstrainedBox(
-          constraints: const BoxConstraints(
-            maxWidth: 400,
-            minWidth: 100,
-          ),
+          constraints: const BoxConstraints(maxWidth: 400, minWidth: 100),
           key: globalKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(
@@ -33,21 +30,10 @@ class HolderWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                  ),
-                  child: Icon(
-                    alerteHelper.icon,
-                    size: 25.0,
-                  ),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  child: Icon(alerteHelper.icon, size: 25.0),
                 ),
-                Flexible(
-                  child: Text(
-                    key: textKey,
-                    alerteHelper.text,
-                  ),
-                ),
+                Flexible(child: Text(key: textKey, alerteHelper.text)),
                 if (alerteHelper.action == null) const SizedBox(width: 10),
                 if (alerteHelper.action != null)
                   Padding(
@@ -59,9 +45,7 @@ class HolderWidget extends StatelessWidget {
                       ),
                       child: TextButton(
                         onPressed: () {},
-                        child: Text(
-                          alerteHelper.action!,
-                        ),
+                        child: Text(alerteHelper.action!),
                       ),
                     ),
                   ),
