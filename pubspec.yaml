@@ -1,6 +1,6 @@
 name: alert_info
 description: "Alert info is flutter package to display an animated alert info, warning, succes or error message from the top or bottom"
-version: 0.0.6
+version: 0.0.7
 homepage: https://github.com/MoezAyadiDev/alert_info
 repository: https://github.com/MoezAyadiDev/alert_info
 screenshots:
@@ -13,7 +13,7 @@ topics:
   - alert
 
 environment:
-  sdk: ^3.8.1
+  sdk: ">=3.5.4 <4.0.0"
 
 dependencies:
   flutter:
@@ -22,6 +22,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 flutter:

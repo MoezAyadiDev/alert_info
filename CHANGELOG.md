@@ -1,3 +1,8 @@
+## 0.0.7
+
+- Update: Dart SDK
+- Fix warning `Missing type annotation`.
+
 ## 0.0.6
 
 - Fix: unmounted OverlayState

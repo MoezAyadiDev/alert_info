@@ -115,7 +115,7 @@ class AlertInfo {
     _buildAlertInfo();
   }
 
-  _buildAlertInfo() {
+  void _buildAlertInfo() {
     AlerteHelper alerteHelper = AlerteHelper(
       context: context,
       text: text,

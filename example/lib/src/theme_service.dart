@@ -8,7 +8,7 @@ class ThemeService {
 
   static ThemeData get darkTheme => _theme(Brightness.dark);
 
-  static _theme(Brightness brighttness) => ThemeData(
+  static ThemeData _theme(Brightness brighttness) => ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: primaryColor,
