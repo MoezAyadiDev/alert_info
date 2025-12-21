@@ -1,6 +1,6 @@
 name: alert_info
 description: "Alert info is flutter package to display an animated alert info, warning, succes or error message from the top or bottom"
-version: 0.0.4
+version: 0.0.6
 homepage: https://github.com/MoezAyadiDev/alert_info
 repository: https://github.com/MoezAyadiDev/alert_info
 screenshots:

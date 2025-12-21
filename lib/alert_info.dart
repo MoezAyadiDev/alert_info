@@ -133,7 +133,9 @@ class AlertInfo {
     );
 
     overlayState ??= Overlay.of(context);
-
+    if (!overlayState!.mounted) {
+      overlayState = Overlay.of(context);
+    }
     late OverlayEntry overlayEntry;
     overlayEntry = OverlayEntry(
       builder: (context) {
