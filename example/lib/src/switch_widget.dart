@@ -42,7 +42,7 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
     );
   }
 
-  _onChanged(bool value) {
+  void _onChanged(bool value) {
     setState(() {
       currentState = !currentState;
       widget.callback(value);

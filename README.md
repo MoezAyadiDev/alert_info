@@ -9,7 +9,7 @@ is an animated alert info to replace default snackbar
 Add `alert_info` to your `pubspec.yaml` as a dependacy
 
 ```yaml
-dependencies: alert_info:0.0.5
+dependencies: alert_info:0.0.7
 ```
 
 ## Usage

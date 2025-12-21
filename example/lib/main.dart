@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
               action: hasAction ? 'Undo' : null,
               actionCallback: hasAction
                   ? () {
-                      print('undo clicked');
+                      debugPrint('undo clicked');
                     }
                   : null,
             );
