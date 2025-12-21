@@ -27,96 +27,89 @@ class AlerteInfoAnimated extends StatelessWidget {
     required this.textWidth,
     required this.textHeight,
     required this.onDismissed,
-  }) : opacity = Tween<double>(begin: 0.0, end: 1.0).animate(
-         CurvedAnimation(
-           parent: controller,
-           curve: const Interval(0.0, 0.200, curve: Curves.ease),
-         ),
-       ),
-       topPosition =
-           TweenSequence(<TweenSequenceItem<double>>[
-             TweenSequenceItem<double>(
-               tween: Tween(
-                 begin: alerteHelper.isTop
-                     ? -(finalHeight + 10)
-                     : alerteHelper.maxHeight + finalHeight,
-                 end: alerteHelper.isTop
-                     ? alerteHelper.padding
-                     : alerteHelper.maxHeight -
-                           alerteHelper.padding -
-                           finalHeight,
-               ).chain(CurveTween(curve: Curves.easeInOut)),
-               weight: sequence1,
-             ),
-             TweenSequenceItem<double>(
-               tween: ConstantTween<double>(
-                 alerteHelper.isTop
-                     ? alerteHelper.padding
-                     : alerteHelper.maxHeight -
-                           alerteHelper.padding -
-                           finalHeight,
-               ),
-               weight: sequence23,
-             ),
-           ]).animate(
-             CurvedAnimation(
-               parent: controller,
-               curve: const Interval(0.0, 1.0),
-             ),
-           ),
-       height =
-           TweenSequence(<TweenSequenceItem<double>>[
-             TweenSequenceItem<double>(
-               tween: Tween(
-                 begin: 55.0,
-                 end: 45.0,
-               ).chain(CurveTween(curve: Curves.linear)),
-               weight: 20,
-             ),
-             TweenSequenceItem<double>(
-               tween: Tween(
-                 begin: 45.0,
-                 end: finalHeight,
-               ).chain(CurveTween(curve: Curves.linear)),
-               weight: 10,
-             ),
-             TweenSequenceItem<double>(
-               tween: ConstantTween<double>(finalHeight),
-               weight: 70,
-             ),
-             //
-           ]).animate(
-             CurvedAnimation(
-               parent: controller,
-               curve: const Interval(0.0, 1.0),
-             ),
-           ),
-       width =
-           TweenSequence(<TweenSequenceItem<double>>[
-             TweenSequenceItem<double>(
-               tween: ConstantTween<double>(44.0),
-               weight: sequence1,
-             ),
-             TweenSequenceItem<double>(
-               tween: Tween(
-                 begin: 44.0,
-                 end: finalWidth - 40,
-               ).chain(CurveTween(curve: Curves.easeIn)),
-               weight: sequence2 / 2,
-             ),
-             TweenSequenceItem<double>(
-               tween: Tween(
-                 begin: finalWidth - 40,
-                 end: finalWidth,
-               ).chain(CurveTween(curve: Curves.elasticOut)),
-               weight: sequence2 / 2,
-             ),
-           ]).animate(
-             CurvedAnimation(
-               parent: controller,
-               curve: const Interval(0.0, 1.0),
-             ),
-           );
+  })  : opacity = Tween<double>(begin: 0.0, end: 1.0).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: const Interval(0.0, 0.200, curve: Curves.ease),
+          ),
+        ),
+        topPosition = TweenSequence(<TweenSequenceItem<double>>[
+          TweenSequenceItem<double>(
+            tween: Tween(
+              begin: alerteHelper.isTop
+                  ? -(finalHeight + 10)
+                  : alerteHelper.maxHeight + finalHeight,
+              end: alerteHelper.isTop
+                  ? alerteHelper.padding
+                  : alerteHelper.maxHeight - alerteHelper.padding - finalHeight,
+            ).chain(CurveTween(curve: Curves.easeInOut)),
+            weight: sequence1,
+          ),
+          TweenSequenceItem<double>(
+            tween: ConstantTween<double>(
+              alerteHelper.isTop
+                  ? alerteHelper.padding
+                  : alerteHelper.maxHeight - alerteHelper.padding - finalHeight,
+            ),
+            weight: sequence23,
+          ),
+        ]).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: const Interval(0.0, 1.0),
+          ),
+        ),
+        height = TweenSequence(<TweenSequenceItem<double>>[
+          TweenSequenceItem<double>(
+            tween: Tween(
+              begin: 55.0,
+              end: 45.0,
+            ).chain(CurveTween(curve: Curves.linear)),
+            weight: 20,
+          ),
+          TweenSequenceItem<double>(
+            tween: Tween(
+              begin: 45.0,
+              end: finalHeight,
+            ).chain(CurveTween(curve: Curves.linear)),
+            weight: 10,
+          ),
+          TweenSequenceItem<double>(
+            tween: ConstantTween<double>(finalHeight),
+            weight: 70,
+          ),
+          //
+        ]).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: const Interval(0.0, 1.0),
+          ),
+        ),
+        width = TweenSequence(<TweenSequenceItem<double>>[
+          TweenSequenceItem<double>(
+            tween: ConstantTween<double>(44.0),
+            weight: sequence1,
+          ),
+          TweenSequenceItem<double>(
+            tween: Tween(
+              begin: 44.0,
+              end: finalWidth - 40,
+            ).chain(CurveTween(curve: Curves.easeIn)),
+            weight: sequence2 / 2,
+          ),
+          TweenSequenceItem<double>(
+            tween: Tween(
+              begin: finalWidth - 40,
+              end: finalWidth,
+            ).chain(CurveTween(curve: Curves.elasticOut)),
+            weight: sequence2 / 2,
+          ),
+        ]).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: const Interval(0.0, 1.0),
+          ),
+        );
 
   @override
   Widget build(BuildContext context) {
@@ -196,8 +189,8 @@ class AlerteInfoAnimated extends StatelessWidget {
                               child: TextButton(
                                 onPressed: () =>
                                     alerteHelper.actionCallback != null
-                                    ? alerteHelper.actionCallback!()
-                                    : null,
+                                        ? alerteHelper.actionCallback!()
+                                        : null,
                                 child: Text(
                                   alerteHelper.action!,
                                   textAlign: TextAlign.center,

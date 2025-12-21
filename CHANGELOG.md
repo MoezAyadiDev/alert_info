@@ -1,3 +1,7 @@
+## 0.0.8
+
+- Fix warning `formatting issues`.
+
 ## 0.0.7
 
 - Update: Dart SDK
